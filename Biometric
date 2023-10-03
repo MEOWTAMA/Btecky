@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class BiometricScanner {
+    public void captureFingerprint() {
+        System.out.println("Scanning fingerprint...");
+        // Simulate fingerprint scanning process
+        System.out.println("Fingerprint captured.");
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        BiometricScanner biometricScanner = new BiometricScanner();
+
+        System.out.println("Biometric Scanner Application");
+        while (true) {
+            System.out.println("Options:");
+            System.out.println("1. Capture Fingerprint");
+            System.out.println("2. Exit");
+            System.out.print("Enter your choice: ");
+
+            int choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    biometricScanner.captureFingerprint();
+                    break;
+                case 2:
+                    System.out.println("Exiting Biometric Scanner Application");
+                    System.exit(0);
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
+            }
+        }
+    }
+}
